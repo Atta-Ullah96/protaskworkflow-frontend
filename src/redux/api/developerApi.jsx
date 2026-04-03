@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const developerApi = createApi({
   reducerPath: "developerApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:4000/api/v1/developer",
+    baseUrl: `${import.meta.env.VITE_BACKEND_URL}/api/v1/developer`,
     // for sending cookies with requests
     credentials: "include",
   }),

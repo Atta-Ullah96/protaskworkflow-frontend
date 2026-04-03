@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const teamApi = createApi({
   reducerPath: 'teamApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:4000/api/v1/team',
+    baseUrl: `${import.meta.env.VITE_BACKEND_URL}/api/v1/team`,
     credentials: 'include', // include cookies
   }),
   tagTypes: ['Team'],

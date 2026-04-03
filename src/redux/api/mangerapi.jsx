@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const managerApi = createApi({
   reducerPath: 'managerApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:4000/api/v1/manager', // Change this to your backend URL
+    baseUrl: `${import.meta.env.VITE_BACKEND_URL}/api/v1/manager`, // Change this to your backend URL
     credentials:'include'
   }),
   tagTypes: ['Developers' ],
